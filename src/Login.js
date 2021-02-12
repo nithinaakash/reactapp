@@ -14,7 +14,9 @@ function Login(props) {
 
     const handleLogin = () => {
         if (username === "nithin" && password === "password") {
-            let path = `/`; 
+            sessionStorage.setItem("username", username);
+            sessionStorage.setItem("password", password);
+            let path = `/`;
             history.push(path);
         }
         else {
@@ -29,7 +31,6 @@ function Login(props) {
             Username<br />
             <input type="text" onChange={(event) => setUsername(event.target.value)} />
 
-
              Password<br />
             <input type="password" onChange={(event) => setPassword(event.target.value)} />
 
@@ -37,7 +38,6 @@ function Login(props) {
                 <input type="button" value={loading ? 'Loading...' : 'Login'} onClick={handleLogin} /><br />
             </div>
         </div>
-
     );
 }
 
