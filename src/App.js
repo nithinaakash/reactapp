@@ -36,6 +36,7 @@ class App extends Component {
             <Route exact path="/meetings" component={MeetingsList} />
             <Route exact path="/add" component={AddMeeting} />
             <Route path="/meetings/:id" component={Meeting} />
+            <Route exact path="/login" component={Login} />
           </Switch>
         </div>
       </div>
